@@ -17,6 +17,7 @@ public class NavalBattle {
         // TODO code application logic here
         // halloooo
         // Coba ah
+        //hello
     }
     
 }
