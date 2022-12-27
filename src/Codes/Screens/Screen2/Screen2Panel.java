@@ -1,8 +1,8 @@
-package Screen2;
+package Codes.Screens.Screen2;
 
-import Screen3.Screen3Frame;
-import mainBoard.MainFrame;
 
+import Codes.Screens.Screen3.Screen3Frame;
+import Codes.Screens.mainBoard.MainFrame;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

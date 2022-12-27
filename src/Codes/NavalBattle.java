@@ -1,4 +1,7 @@
-package navalbattle;
+package Codes;
+
+import Codes.Screens.mainBoard.MainFrame;
+
 
 /**
  *
@@ -11,6 +14,7 @@ public class NavalBattle {
      */
     public static void main(String[] args) {
         // Abis ganti author
+        MainFrame mf = new MainFrame();
     }
     
 }

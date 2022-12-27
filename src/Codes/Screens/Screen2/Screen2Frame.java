@@ -1,15 +1,15 @@
-package Screen3;
+package Codes.Screens.Screen2;
 
 import javax.swing.*;
 
-public class Screen3Frame extends JFrame{
-    private  Screen3Panel mainPanel3;
+public class Screen2Frame extends JFrame{
+    private  Screen2Panel mainPanel;
     private ImageIcon bgIcon;
     private JLabel myLabel;
 
-    public Screen3Frame()
+    public Screen2Frame()
     {
-        bgIcon = new ImageIcon(this.getClass().getResource("/Resources/loadingscreen.jpg"));
+        bgIcon = new ImageIcon(this.getClass().getResource("/Resources/picsay.jpg"));
         myLabel = new JLabel(bgIcon);
         myLabel.setSize(800,450);
 
@@ -18,8 +18,8 @@ public class Screen3Frame extends JFrame{
         this.setBounds(320, 127, 800, 450);
         this.setResizable(false);
         this.setVisible(true);
-        this.mainPanel3 = new Screen3Panel(this);
-        this.getContentPane().add(mainPanel3);
+        this.mainPanel = new Screen2Panel(this);
+        this.getContentPane().add(mainPanel);
 
     }
 }

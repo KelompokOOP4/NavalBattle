@@ -1,4 +1,4 @@
-package BaseEntities;
+package Codes.BaseEntities;
 
 public abstract class BaseObject {
     private int id;
