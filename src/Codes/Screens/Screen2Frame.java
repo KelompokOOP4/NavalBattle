@@ -1,4 +1,4 @@
-package Codes.Screens.Screen2;
+package Codes.Screens;
 
 import javax.swing.*;
 

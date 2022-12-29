@@ -1,4 +1,4 @@
-package Codes.Screens.Screen3;
+package Codes.Screens;
 
 import Codes.Screens.Screen2.Screen2Frame;
 import javax.swing.*;

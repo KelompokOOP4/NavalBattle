@@ -1,7 +1,7 @@
-package Codes.Screens.Screen2;
+package Codes.Screens;
 
 
-import Codes.Screens.Screen3.Screen3Frame;
+import Codes.Screens.Screen3Frame;
 import Codes.Screens.mainBoard.MainFrame;
 import javax.swing.*;
 import java.awt.*;
