@@ -12,11 +12,6 @@ public class MainFrame extends JFrame{
 
     public MainFrame()
     {
-        bgIcon = new ImageIcon(this.getClass().getResource("/Resources/startscreen.jpg"));
-        myLabel = new JLabel(bgIcon);
-        myLabel.setSize(800,450);
-
-        this.add(myLabel);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setBackground(Color.BLACK);
         this.setBounds(320, 127, 800, 450);
