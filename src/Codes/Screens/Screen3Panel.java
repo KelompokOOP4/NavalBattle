@@ -1,8 +1,6 @@
 package Codes.Screens;
 
-import Codes.Screens.Screen2.Screen2Frame;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
