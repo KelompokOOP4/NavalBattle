@@ -13,7 +13,6 @@ public class MainFrame extends JFrame{
     public MainFrame()
     {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setBackground(Color.BLACK);
         this.setBounds(320, 127, 800, 450);
         this.setResizable(false);
         this.setVisible(true);
