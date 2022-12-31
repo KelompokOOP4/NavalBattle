@@ -8,7 +8,7 @@ package Codes;
 import java.sql.*;
 import java.util.*;
 
-public class Leaderboard {
+/*public class Leaderboard {
     private Connection con;
     private String url;
     private String uname;
@@ -58,4 +58,4 @@ public class Leaderboard {
         }
         return allLeaderboard;
     }
-}
+}*/
