@@ -8,7 +8,7 @@ package Codes;
 import java.sql.*;
 import java.util.*;
 
-public class Leaderboard {
+/*public class Leaderboard {
     private Connection con;
     private String url;
     private String uname;
@@ -22,6 +22,7 @@ public class Leaderboard {
     pass = "";
     setConnectionAndStatement();
     }
+
     private void setConnectionAndStatement(){
        try{
            con = DriverManager.getConnection(url, uname, pass);
@@ -32,12 +33,17 @@ public class Leaderboard {
        }
     }
     
+    private static class Score {
+        public Score() {
+        }
+    }
+        
     public void save(Score score) {
         try{
             query = "INSERT INTO leaderboard VALUES ('%s', %d)";
             query = String.format(query, score.getName(), score.getScore());
             stmt.executeUpdate(query);
-            System.out.println("Congratulation for ypur score!");
+            System.out.println("Congratulation for your score!");
         } catch (SQLException ex){
             System.err.print("Error inserting score: "+ex.getMessage());
             System.exit(1);
@@ -58,4 +64,4 @@ public class Leaderboard {
         }
         return allLeaderboard;
     }
-}
+}*/
