@@ -12,10 +12,10 @@ public class Bar {
     private String orientation;
     JProgressBar jb;
 
-    public Bar(int boundsX,int boundsY, int boundsWidth, int boundsHeight,Color color, int orientation)
+    public Bar(int progresBarmax, int boundsX,int boundsY, int boundsWidth, int boundsHeight,Color color, int orientation)
     {
 
-        jb = new JProgressBar(0,100);
+        jb = new JProgressBar(0,progresBarmax);
         jb.setBounds(boundsX,boundsY,boundsWidth,boundsHeight);
         jb.setBackground(color);
         jb.setBackground(color);
