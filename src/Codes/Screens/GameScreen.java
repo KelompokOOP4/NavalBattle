@@ -30,6 +30,7 @@ public class GameScreen extends JPanel implements Runnable{
     private boolean isMultiplayer;
     private PlayerOne p1 = new PlayerOne(this, p1c);
     private PlayerTwo p2 = new PlayerTwo(this, p2c);
+    public Image img1,img2,img3;
 
     public GameScreen(boolean isMultiplayer) {
         this.setPreferredSize(new Dimension(800, 450));
@@ -39,8 +40,8 @@ public class GameScreen extends JPanel implements Runnable{
         this.addKeyListener(p2c);
         this.setFocusable(true);
         this.isMultiplayer = isMultiplayer;
-        public Image img1,img2,img3;
-        ImageIcon i = new ImageIcon (this.getClass().getResource("/gambar/backgroundocean1.png"));
+        
+        ImageIcon i = new ImageIcon (this.getClass().getResource("/Resources/backgroundocean1.png"));
         img1 = i.getImage();
         img2 = i.getImage();
         img3 = i.getImage();
