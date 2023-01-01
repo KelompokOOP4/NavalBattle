@@ -17,7 +17,7 @@ This game based on shooter game and build on JAVA. This game use MySQL local dat
 - Operating System such as Windows, Linux or Mac.
 - IDE like Apache Netbeans or IntelliJ.
 - Database such as MySQL Workbench or XAMPP.
-- [JDBC API] for import on Project's Library on IDE (https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.28/mysql-connector-java-8.0.28.jar).
+- JDBC API for import on Project's Library on IDE. Here is the [link](https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.28/mysql-connector-java-8.0.28.jar).
 # *How to Install*
 - Download or clone [this repository](https://github.com/KelompokOOP4/NavalBattle.git).
 - Import the database [leaderboard.sql](github.com/KelompokOOP4/NavalBattle/blob/main/leaderboard.sql). Here is the tutorial if you [don't know how to](https://id.godaddy.com/help/impor-file-sql-ke-database-mysql-6802).
