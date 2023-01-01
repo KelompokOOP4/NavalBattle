@@ -12,6 +12,8 @@ public abstract class BaseObject {
     private int spriteHeight=200;
     private int spriteWidth=200;
     private boolean isDead;
+    private int windowWidth = 800;
+    private int windowHeight = 450;
 
     public void setSpeed(double speed) {
         this.speed = speed;
@@ -68,7 +70,26 @@ public abstract class BaseObject {
     public boolean getIsDead(){
         return isDead;
     }
+
+    public void setWindowWidth(int windowWidth) {
+        this.windowWidth = windowWidth;
+    }
     
+    public int getWindowWidth() {
+        return windowWidth;
+    }
+    
+    public void setWindowHeight(int windowHeight) {
+        this.windowHeight = windowHeight;
+    }
+    
+    public int getWindowHeight() {
+        return windowHeight;
+    }
+
+    
+    
+
     public void draw(Graphics2D g2){
         BufferedImage image = sprite;
         g2.drawImage(image, (int)xLocation, (int)yLocation,spriteWidth,spriteHeight,null);
