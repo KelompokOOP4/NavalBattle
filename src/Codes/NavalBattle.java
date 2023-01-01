@@ -1,6 +1,8 @@
 package Codes;
 
-import Codes.Screens.mainBoard.MainFrame;
+import Codes.Screens.MainFrame;
+
+import java.awt.*;
 
 
 /**
@@ -16,6 +18,7 @@ public class NavalBattle {
         // Abis ganti author
         MainFrame mf = new MainFrame();
         //Screen3Frame sf = new Screen3Frame();
+        //Bar b = new Bar(0,0,10,"v", new Color(0,))
     }
     
 }

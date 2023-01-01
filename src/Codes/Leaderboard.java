@@ -10,7 +10,11 @@ import java.util.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
+<<<<<<< HEAD
 public class Leaderboard extends JFrame{
+=======
+/*public class Leaderboard {
+>>>>>>> 772a4ba742dd8009134687f9bb6a2671e943a43b
     private Connection con;
     private String url;
     private String uname;
@@ -64,6 +68,7 @@ public class Leaderboard extends JFrame{
         }
         return leaderboard;
     }
+<<<<<<< HEAD
     
     public static void print(){
         JTable table = new JTable();
@@ -88,3 +93,6 @@ public class Leaderboard extends JFrame{
         window.setContentPane(panel);
     }
 }
+=======
+}*/
+>>>>>>> 772a4ba742dd8009134687f9bb6a2671e943a43b
