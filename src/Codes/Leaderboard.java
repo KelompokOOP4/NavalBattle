@@ -5,12 +5,12 @@ package Codes;
  * @author rizky
  */
 
-import java.sql.*;
-import java.util.*;
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-
+//import java.sql.*;
+//import java.util.*;
+//import javax.swing.*;
+//import javax.swing.table.DefaultTableModel;
 //
+////
 //public class Leaderboard extends JFrame{
 //    private Connection con;
 //    private String url;
