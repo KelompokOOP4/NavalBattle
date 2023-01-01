@@ -33,19 +33,20 @@ public class Leaderboard {
         }
     }
     
-    public Leaderboard leaderboard(){
-        Leaderboard leaderboard = null;
+    public ArrayList <Leaderboard> getLeaderboard(){
+        ArrayList<Leaderboard> leaderboard = new ArrayList<Leaderboard>();
+        Leaderboard l = null;
         
         try{
             query = "SELECT * FROM leaderboard ORDER BY score DESC LIMIT 1";
             ResultSet rs = stmt.executeQuery(query);
             
             while(rs.next()){
-                leaderboard = new Leaderboard(
+                l = new Leaderboard(
                 rs.getString("name"),
                 rs.getInt("score"));
             }
-            
+            leaderboard.add(l);
             if(leaderboard == null){
                 System.out.println("Data tidak ditemukan");
                 System.exit(0);
