@@ -22,10 +22,17 @@ public class MainFrame implements ActionListener {
         frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 
-
+        ImageIcon startImage = new ImageIcon(this.getClass().getResource("/Resources/start.jpg"));
+        ImageIcon aboutImage = new ImageIcon(this.getClass().getResource("/Resources/about.jpg"));
+        ImageIcon exitImage = new ImageIcon(this.getClass().getResource("/Resources/exitt.jpg"));
+        ImageIcon creditsImage = new ImageIcon(this.getClass().getResource("/Resources/creditsButton.jpg"));
         buttonsMenu = new JButton[4];
         buttonNames = new String[]{"START", "ABOUT", "CREDITS"};
-        buttonsMenu[3] = new JButton("EXIT");
+
+        buttonsMenu[0] = new JButton(startImage);
+        buttonsMenu[1] = new JButton(aboutImage);
+        buttonsMenu[2] = new JButton(creditsImage);
+        buttonsMenu[3] = new JButton(exitImage);
         buttonsMenu[3].setBounds(350, 330 , 80, 30);
         buttonsMenu[3].addActionListener(this);
         this.configureMenuButtons();
@@ -42,16 +49,22 @@ public class MainFrame implements ActionListener {
             frame.setVisible(false);
             frame.dispose();
 
-        } else if (obj == buttonsMenu[3]) {
+        } else if (obj == buttonsMenu[1]){
+            new About();
+            frame.setVisible(false);
+            frame.dispose();
+        } else if (obj == buttonsMenu[2]){
+            new Credits();
+            frame.setVisible(false);
+            frame.dispose();
+        }else if (obj == buttonsMenu[3]) {
             System.exit(1);
-
         }
 
     }
 
     private void configureMenuButtons () {
         for (int i = 0; i < 3; i++) {
-            buttonsMenu[i] = new JButton(buttonNames[i]);
             buttonsMenu[i].addActionListener(this);
             buttonsMenu[i].setBounds(200 + i * 150, 250, 80, 30);
             myLabel.add(buttonsMenu[i]);

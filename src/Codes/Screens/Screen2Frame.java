@@ -12,7 +12,7 @@ public class Screen2Frame implements ActionListener {
     private JButton backLDR[];
     private JLabel myLabel;
     public Screen2Frame() {
-        bgIcon = new ImageIcon(this.getClass().getResource("/Resources/Background.jpg"));
+        bgIcon = new ImageIcon(this.getClass().getResource("/Resources/levelscreen.jpg"));
         myLabel = new JLabel(bgIcon);
         myLabel.setSize(800,450);
 
@@ -23,16 +23,24 @@ public class Screen2Frame implements ActionListener {
         frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
         frame.setVisible(true);
 
-
+        ImageIcon ldrImage = new ImageIcon(this.getClass().getResource("/Resources/leaderboard.jpg"));
+        ImageIcon backImage = new ImageIcon(this.getClass().getResource("/Resources/back.jpg"));
+        ImageIcon easyImage = new ImageIcon(this.getClass().getResource("/Resources/easy.jpg"));
+        ImageIcon mediumImage = new ImageIcon(this.getClass().getResource("/Resources/medium.jpg"));
+        ImageIcon hardImage = new ImageIcon(this.getClass().getResource("/Resources/hard.jpg"));
         backLDR = new JButton[2];
-        backLDR[0] = new JButton("exit");
-        backLDR[1] = new JButton("LEADERBOARD");
-        backLDR[0].setBounds(20, 20 , 50, 50);
-        backLDR[1].setBounds(20, 105 , 50, 50);
+        backLDR[0] = new JButton(backImage);
+        backLDR[1] = new JButton(ldrImage);
+        backLDR[0].setBounds(20, 20 , 80, 30);
+        backLDR[1].setBounds(20, 105 , 80, 30);
         this.configureBackLdrButtons();
 
         this.levels = new JButton[3];
-        this.levelNames = new String[]{"LEVEL 1", "LEVEL 2", " LEVEL 3"};
+        levels[0] = new JButton(easyImage);
+        levels[1] = new JButton(mediumImage);
+        levels[2] = new JButton(hardImage);
+        levels[1].setEnabled(false);
+        levels[2].setEnabled(false);
         this.configureLevelButtons();
 
     }
@@ -65,7 +73,6 @@ public class Screen2Frame implements ActionListener {
     private void configureLevelButtons ()
     {
         for (int i = 0; i < levels.length; i++) {
-            levels[i] = new JButton(levelNames[i]);
             levels[i].addActionListener(this);
             levels[i].setBounds(380, 200 + i * 50, 80, 30);
             myLabel.add(levels[i]);
