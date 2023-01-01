@@ -17,7 +17,7 @@ public class Screen2Frame implements ActionListener {
         myLabel.setSize(800,450);
 
         frame = new JFrame("Menu Utama");
-        frame.add(myLabel);;
+        frame.add(myLabel);
         frame.setBounds(320, 127, 800, 450);
         frame.setLayout(null);
         frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);

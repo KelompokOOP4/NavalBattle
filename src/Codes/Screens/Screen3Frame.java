@@ -119,6 +119,11 @@ public class Screen3Frame implements ActionListener {
             frame.setVisible(false);
             frame.dispose();
         }
+        if(obj==start){
+            new GameFrame(multiplayer[1].isSelected());
+            frame.setVisible(false);
+            frame.dispose();
+        }
     }
 
     private void configureMultiButtons () {
