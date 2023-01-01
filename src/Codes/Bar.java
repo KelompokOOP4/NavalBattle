@@ -8,8 +8,8 @@ import java.awt.event.ActionListener;
 
 public class Bar {
     private int bounds;
-    private String color;
-    private String orientation;
+    private Color color;
+    private int orientation;
     JProgressBar jb;
 
     public Bar(int progresBarmax, int boundsX,int boundsY, int boundsWidth, int boundsHeight,Color color, int orientation)
