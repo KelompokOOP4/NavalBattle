@@ -1,6 +1,6 @@
 package Codes;
 
-import Codes.Screens.mainBoard.MainFrame;
+import Codes.Screens.MainFrame;
 
 import java.awt.*;
 
