@@ -30,14 +30,14 @@ public class LeaderboardPanel extends JPanel implements ActionListener {
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D)g;
-        background =new ImageIcon(getClass().getResource("/image/Background/leaderboard.png")).getImage();
+        background =new ImageIcon(getClass().getResource("/Resources/")).getImage();
     
         
     }
     
     private void configureButton()
     {
-            ImageIcon im = new ImageIcon(this.getClass().getResource("/image/Button/back.png"));
+            ImageIcon im = new ImageIcon(this.getClass().getResource("/Resources/"));
             backButton = new JButton(im);
             backButton.addActionListener(this);
             backButton.setBounds(635, 535 , 250, 50);
