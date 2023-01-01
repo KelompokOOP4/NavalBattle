@@ -12,8 +12,10 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
 /**
@@ -30,13 +32,18 @@ public class GameScreen extends JPanel implements Runnable{
     private PlayerTwo p2 = new PlayerTwo(this, p2c);
 
     public GameScreen(boolean isMultiplayer) {
-        this.setPreferredSize(new Dimension(768, 576));
+        this.setPreferredSize(new Dimension(800, 450));
         this.setBackground(Color.white);
         this.setDoubleBuffered(true);
         this.addKeyListener(p1c);
         this.addKeyListener(p2c);
         this.setFocusable(true);
         this.isMultiplayer = isMultiplayer;
+        public Image img1,img2,img3;
+        ImageIcon i = new ImageIcon (this.getClass().getResource("/gambar/backgroundocean1.png"));
+        img1 = i.getImage();
+        img2 = i.getImage();
+        img3 = i.getImage();
     }
     
     
