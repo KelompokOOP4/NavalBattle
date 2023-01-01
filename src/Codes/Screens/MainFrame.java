@@ -4,6 +4,10 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ *
+ * @author tri seda mulya
+ */
 public class MainFrame implements ActionListener {
     private JFrame frame;
     private ImageIcon bgIcon;

@@ -4,6 +4,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ *
+ * @author tri seda mulya
+ */
+
 public class Screen2Frame implements ActionListener {
     private JFrame frame;
     private JButton levels[];

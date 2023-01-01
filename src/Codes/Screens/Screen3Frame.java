@@ -4,6 +4,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ *
+ * @author tri seda mulya
+ */
+
 public class Screen3Frame implements ActionListener {
     private JFrame frame;
     private JButton levels[];
@@ -16,7 +21,7 @@ public class Screen3Frame implements ActionListener {
     private ImageIcon bgIcon;
     private JLabel myLabel;
     public Screen3Frame() {
-        bgIcon = new ImageIcon(this.getClass().getResource("/Resources/loadingscreen.jpg"));
+        bgIcon = new ImageIcon(this.getClass().getResource("/Resources/loadingscreenFinal.jpg"));
         myLabel = new JLabel(bgIcon);
         myLabel.setSize(800,450);
 
@@ -34,16 +39,12 @@ public class Screen3Frame implements ActionListener {
         multiplayer[1] = new JButton(multiImage);
         this.configureMultiButtons();
 
+        charNames = new String[]{"NAVAL 1","NAVAL 2","NAVAL 3"};
+
         char1 = new JRadioButton[3];
-        char1[0] = new JRadioButton();
-        char1[1] = new JRadioButton();
-        char1[2] = new JRadioButton();
         this.configureChar1Buttons();
 
         this.char2 = new JRadioButton[3];
-        char2[0] = new JRadioButton();
-        char2[1] = new JRadioButton();
-        char2[2] = new JRadioButton();
         this.configureChar2Buttons();
 
         ImageIcon backImage = new ImageIcon(this.getClass().getResource("/Resources/back.jpg"));
@@ -54,8 +55,8 @@ public class Screen3Frame implements ActionListener {
 
         ImageIcon playImage = new ImageIcon(this.getClass().getResource("/Resources/play.jpg"));
         start = new JButton(playImage);
-        start = new JButton("START");
-        start.setBounds(710, 20 , 80, 30);
+        start = new JButton(playImage);
+        start.setBounds(680, 20 , 80, 30);
         start.addActionListener(this);
         myLabel.add(start);
         start.setEnabled(false);
@@ -131,8 +132,9 @@ public class Screen3Frame implements ActionListener {
 
     private void configureChar1Buttons () {
         for (int i = 0; i < char1.length; i++) {
+            char1[i] = new JRadioButton(charNames[i]);
             char1[i].addActionListener(this);
-            char1[i].setBounds(150 + i * 150, 180, 80, 30);
+            char1[i].setBounds(140 + i * 150, 180, 80, 30);
             myLabel.add(char1[i]);
             char1[i].setEnabled(false);
         }
@@ -141,6 +143,7 @@ public class Screen3Frame implements ActionListener {
 
     private void configureChar2Buttons () {
         for (int j = 0; j < char2.length; j++) {
+            char2[j] = new JRadioButton(charNames[j]);
             char2[j].addActionListener(this);
             char2[j].setBounds(150 + j * 150, 350, 80, 30);
             myLabel.add(char2[j]);
