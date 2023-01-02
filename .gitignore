@@ -2,3 +2,4 @@
 /build/
 .idea/ant.xml
 /out
+/dist/

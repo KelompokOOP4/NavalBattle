@@ -15,7 +15,7 @@ public class MainFrame implements ActionListener {
     private JButton buttonsMenu[];
     private String buttonNames[];
     public MainFrame() {
-        bgIcon = new ImageIcon(this.getClass().getResource("/Resources/Background.jpg"));
+        bgIcon = new ImageIcon(this.getClass().getResource("/Resources/first.jpg"));
         myLabel = new JLabel(bgIcon);
         myLabel.setSize(800,450);
 
@@ -51,6 +51,7 @@ public class MainFrame implements ActionListener {
         if (obj == buttonsMenu[0]) {
             new Screen2Frame();
             frame.setVisible(false);
+
             frame.dispose();
 
         } else if (obj == buttonsMenu[1]){

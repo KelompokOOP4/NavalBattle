@@ -17,7 +17,7 @@ public class Screen2Frame implements ActionListener {
     private JButton backLDR[];
     private JLabel myLabel;
     public Screen2Frame() {
-        bgIcon = new ImageIcon(this.getClass().getResource("/Resources/levelscreen.jpg"));
+        bgIcon = new ImageIcon(this.getClass().getResource("/Resources/menuBG.jpg"));
         myLabel = new JLabel(bgIcon);
         myLabel.setSize(800,450);
 

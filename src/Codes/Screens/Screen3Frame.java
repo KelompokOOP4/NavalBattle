@@ -7,6 +7,8 @@ import java.awt.event.ActionListener;
 /**
  *
  * @author tri seda mulya
+ *
+ *
  */
 
 public class Screen3Frame implements ActionListener {
