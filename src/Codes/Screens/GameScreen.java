@@ -4,6 +4,7 @@
  */
 package Codes.Screens;
 
+import Codes.Bar;
 import Codes.BaseEntities.Bullet;
 import Codes.BaseEntities.Enemy;
 import Codes.BaseEntities.PlayerOne;
@@ -42,6 +43,7 @@ public class GameScreen extends JPanel implements Runnable{
     private ArrayList<Bullet> ammoP2 = p2.getAmmo();
     private ArrayList<Enemy> enemies = new ArrayList<>();
     Random randomizer = new Random();
+    Bar objectiveBar;
 
     public GameScreen(boolean isMultiplayer) {
         
@@ -56,6 +58,7 @@ public class GameScreen extends JPanel implements Runnable{
         img1 = i.getImage();
         img2 = i.getImage();
         img3 = i.getImage();
+        objectiveBar = new Bar((int) finish,20,20,700,50,0);
     }
     
     public void startGame(){
@@ -110,6 +113,7 @@ public class GameScreen extends JPanel implements Runnable{
 
     public void update(){
         finish -= 0.5;
+        objectiveBar.add((int) finish);
 //        System.out.println(finish);
         enemySpawner();
         p1.update();

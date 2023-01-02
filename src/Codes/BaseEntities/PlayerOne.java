@@ -79,13 +79,13 @@ public class PlayerOne extends Ship{
         if(centerxImage==getWindowWidth()){
             setxLocation(x-speed);
         }
-        if(centeryImage==16){
+        if(centeryImage==20){
             setyLocation(y+speed);
         }
         if(centerxImage==0){
             setxLocation(x+speed);
         }
-        if(centeryImage==276){
+        if(centeryImage==420){
             setyLocation(y-speed);
         }
         createCollisionArea();

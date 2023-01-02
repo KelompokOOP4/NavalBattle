@@ -8,17 +8,16 @@ import java.awt.event.ActionListener;
 
 public class Bar {
     private int bounds;
-    private Color color;
     private int orientation;
     JProgressBar jb;
 
-    public Bar(int progresBarmax, int boundsX,int boundsY, int boundsWidth, int boundsHeight,Color color, int orientation)
+    public Bar(int progresBarmax, int boundsX,int boundsY, int boundsWidth, int boundsHeight,int orientation)
     {
 
         jb = new JProgressBar(0,progresBarmax);
         jb.setBounds(boundsX,boundsY,boundsWidth,boundsHeight);
-        jb.setBackground(color);
-        jb.setBackground(color);
+        jb.setBackground(new Color(0,191,255));
+        jb.setBackground(new Color(0,255,127));
         if(orientation == 0)
         {
             jb.setOrientation(SwingConstants.HORIZONTAL);
