@@ -9,7 +9,6 @@ import Codes.BaseEntities.Bullet;
 import Codes.BaseEntities.Enemy;
 import Codes.BaseEntities.PlayerOne;
 import Codes.BaseEntities.PlayerTwo;
-import Codes.Handlers.CollisionHandler;
 import Codes.Handlers.Player1Control;
 import Codes.Handlers.Player2Control;
 import java.awt.Color;
