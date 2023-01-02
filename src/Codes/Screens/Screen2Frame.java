@@ -4,6 +4,11 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ *
+ * @author tri seda mulya
+ */
+
 public class Screen2Frame implements ActionListener {
     private JFrame frame;
     private JButton levels[];
@@ -12,7 +17,7 @@ public class Screen2Frame implements ActionListener {
     private JButton backLDR[];
     private JLabel myLabel;
     public Screen2Frame() {
-        bgIcon = new ImageIcon(this.getClass().getResource("/Resources/levelscreen.jpg"));
+        bgIcon = new ImageIcon(this.getClass().getResource("/Resources/menuBG.jpg"));
         myLabel = new JLabel(bgIcon);
         myLabel.setSize(800,450);
 

@@ -1,4 +1,6 @@
-package Codes;
+//<<<<<<< HEAD
+//=======
+//package Codes;
 
 /**
  *
@@ -20,7 +22,7 @@ package Codes;
 //    private String query;
 //    private String name;
 //    private int score;
-//    
+//
 //    public Leaderboard(String name, int score){
 //    url = "jdbc:mysql://localhost/leaderboard";
 //    uname = "root";
@@ -36,7 +38,7 @@ package Codes;
 //           System.exit(1);
 //       }
 //    }
-//    
+//
 //    public void save(Score score) {
 //        try{
 //            query = "INSERT INTO leaderboard VALUES ('%s', %d)";
@@ -48,7 +50,7 @@ package Codes;
 //            System.exit(1);
 //        }
 //    }
-//    
+//
 //    public ArrayList<Leaderboard> getLeaderboard(){
 //        ArrayList<Leaderboard> leaderboard = new ArrayList<Leaderboard>();
 //        Leaderboard l = null;
@@ -56,7 +58,7 @@ package Codes;
 //            query = "SELECT * FROM leaderboard ORDER BY score DESC";
 //            ResultSet rs = stmt.executeQuery(query);
 //            while(rs.next()){
-//                l = new Leaderboard(rs.getString("name"), rs.getInt("score"));             
+//                l = new Leaderboard(rs.getString("name"), rs.getInt("score"));
 //            }
 //            leaderboard.add(l);
 //        } catch (SQLException ex){
@@ -65,7 +67,7 @@ package Codes;
 //        }
 //        return leaderboard;
 //    }
-//    
+//
 //    public static void print(){
 //        JTable table = new JTable();
 //        DefaultTableModel model = new DefaultTableModel();
@@ -89,3 +91,4 @@ package Codes;
 //        window.setContentPane(panel);
 //    }
 //}
+//>>>>>>> 37f7065c23847bba7f374417f4dbceb975e0740e
