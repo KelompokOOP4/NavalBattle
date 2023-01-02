@@ -20,8 +20,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.ImageIcon;
-import javax.swing.JPanel;
+import javax.swing.*;
 
 /**
  *
@@ -37,12 +36,12 @@ public class GameScreen extends JPanel implements Runnable{
     private PlayerTwo p2 = new PlayerTwo(this, p2c);
     private Image img1, img2, img3;
     private int nx1, nx2, nx3;
-    private double finish=9000;
+    private double finish=5000;
     private ArrayList<Bullet> ammoP1 = p1.getAmmo();
     private ArrayList<Bullet> ammoP2 = p2.getAmmo();
     private ArrayList<Enemy> enemies = new ArrayList<>();
     Random randomizer = new Random();
-    Bar objectiveBar;
+    JProgressBar jb;
 
     public GameScreen(boolean isMultiplayer) {
         
@@ -57,7 +56,13 @@ public class GameScreen extends JPanel implements Runnable{
         img1 = i.getImage();
         img2 = i.getImage();
         img3 = i.getImage();
-        objectiveBar = new Bar((int) finish,20,20,700,50,0);
+        jb = new JProgressBar(0, (int) finish);
+        jb.setBounds(20,10,600,40);
+        jb.setBackground(new Color(0,191,255));
+        jb.setForeground(new Color(0,255,127));
+        jb.setOrientation(SwingConstants.HORIZONTAL);
+        jb.setValue(0);
+        jb.setStringPainted(true);
     }
     
     public void startGame(){
@@ -112,11 +117,10 @@ public class GameScreen extends JPanel implements Runnable{
 
     public void update(){
         finish -= 0.5;
-        objectiveBar.add((int) finish);
-//        System.out.println(finish);
+        jb.setValue((int) finish);
+        System.out.println(finish);
         enemySpawner();
         p1.update();
-        System.out.println(p1.getyLocation());
         if(isMultiplayer){
             p2.update();
             for(Bullet bullet : ammoP2){

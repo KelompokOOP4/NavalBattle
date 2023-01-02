@@ -17,7 +17,7 @@ public class Bar {
         jb = new JProgressBar(0,progresBarmax);
         jb.setBounds(boundsX,boundsY,boundsWidth,boundsHeight);
         jb.setBackground(new Color(0,191,255));
-        jb.setBackground(new Color(0,255,127));
+        jb.setForeground(new Color(0,255,127));
         if(orientation == 0)
         {
             jb.setOrientation(SwingConstants.HORIZONTAL);
