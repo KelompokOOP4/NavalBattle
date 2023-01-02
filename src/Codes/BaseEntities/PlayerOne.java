@@ -35,7 +35,7 @@ public class PlayerOne extends Ship{
     @Override
     public void getImage(){
         try{
-            setSprite(ImageIO.read(getClass().getResourceAsStream("/images/ship 1.png")));
+            setSprite(ImageIO.read(getClass().getResourceAsStream("/Resources/Sprites/ship 1.png")));
             
         }catch(IOException e){
             e.printStackTrace();
