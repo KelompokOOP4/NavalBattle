@@ -52,7 +52,7 @@ public class GameScreen extends JPanel implements Runnable{
         this.addKeyListener(p2c);
         this.setFocusable(true);
         this.isMultiplayer = isMultiplayer;
-        ImageIcon i = new ImageIcon (this.getClass().getResource("/Resources/backgroundocean1.png"));
+        ImageIcon i = new ImageIcon (this.getClass().getResource("/Resources/backgroundocean4.png"));
         img1 = i.getImage();
         img2 = i.getImage();
         img3 = i.getImage();
