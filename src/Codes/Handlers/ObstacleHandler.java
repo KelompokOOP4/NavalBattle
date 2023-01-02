@@ -4,6 +4,7 @@
  */
 package Codes.Handlers;
 
+import Codes.BaseEntities.BaseObject;
 import Codes.BaseEntities.Obstacle;
 import java.awt.Graphics2D;
 
@@ -22,4 +23,5 @@ public class ObstacleHandler extends OtherObjectHandler{
     @Override
     public void draw(Graphics2D g2d) {
     }
+
 }

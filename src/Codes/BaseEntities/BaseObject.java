@@ -11,10 +11,19 @@ public abstract class BaseObject {
     private BufferedImage sprite = null;
     private int spriteHeight=200;
     private int spriteWidth=200;
-    private boolean isDead;
+    public boolean isDead;
     private int windowWidth = 800;
     private int windowHeight = 450;
 
+    public Rectangle getCollisionArea() {
+        return collisionArea;
+    }
+
+    public void setCollisionArea(Rectangle collisionArea) {
+        this.collisionArea = collisionArea;
+    }
+
+    
     public void setSpeed(double speed) {
         this.speed = speed;
     }
@@ -63,14 +72,6 @@ public abstract class BaseObject {
         return spriteWidth;
     }
 
-    public void setIsDead(boolean isDead) {
-        this.isDead = isDead;
-    }
-    
-    public boolean getIsDead(){
-        return isDead;
-    }
-
     public void setWindowWidth(int windowWidth) {
         this.windowWidth = windowWidth;
     }
@@ -97,5 +98,7 @@ public abstract class BaseObject {
     
     public abstract void setDefaultValues();
     public abstract void getImage();
+    public void createCollisionArea(){
+    };
     public abstract void update();
 }

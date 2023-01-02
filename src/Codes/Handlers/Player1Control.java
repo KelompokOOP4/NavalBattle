@@ -33,7 +33,7 @@ public class Player1Control implements KeyListener{
         if (keyCode==KeyEvent.VK_RIGHT) {
             rightPressed = true;
         }
-        if (keyCode==KeyEvent.VK_J){
+        if (keyCode==KeyEvent.VK_SPACE){
             shootPressed=true;
         }
     }

@@ -7,6 +7,7 @@ package Codes.BaseEntities;
 import Codes.Handlers.Player1Control;
 import Codes.Screens.GameScreen;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
@@ -17,11 +18,14 @@ import javax.imageio.ImageIO;
 public class PlayerOne extends Ship{
 
     GameScreen gs;
-    Player1Control controller;
+    public Player1Control controller;
+    Rectangle area = new Rectangle();
+    int shootedBullet = 0,bulletPerSecond = 1, shootDelay=50;
 
     public PlayerOne(GameScreen gs, Player1Control eh) {
         this.gs = gs;
         this.controller = eh;
+        this.isDead = false;
         setDefaultValues();
         getImage();
     }
@@ -30,7 +34,8 @@ public class PlayerOne extends Ship{
         setxLocation(100);
         setyLocation(100);
         setSpeed(4);
-        setHealth(200);
+        setHealth(100);
+        createCollisionArea();
     }
     @Override
     public void getImage(){
@@ -46,7 +51,8 @@ public class PlayerOne extends Ship{
         double x = getxLocation();
         double y = getyLocation();
         double speed = getSpeed();
-        
+        int centerxImage = (int) (x +(getSpriteWidth()/2));
+        int centeryImage = (int) (y +(getSpriteHeight()/2));
         if(controller.upPressed==true){
             setyLocation(y-speed);
         }
@@ -60,14 +66,47 @@ public class PlayerOne extends Ship{
             setxLocation(x+speed);
         }
         if(controller.shootPressed==true){
-//            bm.addBullet(new Bullet(gs, x+(getSpriteWidth()/2), y+(getSpriteHeight()/2)));
+            if (shootedBullet<bulletPerSecond) {
+                shootedBullet++;
+                getAmmo().add(new Bullet(gs, (int)x+(getSpriteWidth()/2), (int)y+(getSpriteHeight()/2)));
+            }else if(shootedBullet>shootDelay){
+                shootedBullet=0;
+            }else{
+                shootedBullet++;
+            }
         }
         
+        if(centerxImage==getWindowWidth()){
+            setxLocation(x-speed);
+        }
+        if(centeryImage==16){
+            setyLocation(y+speed);
+        }
+        if(centerxImage==0){
+            setxLocation(x+speed);
+        }
+        if(centeryImage==276){
+            setyLocation(y-speed);
+        }
+        createCollisionArea();
+        
+        
+    }
+    
+    @Override
+    public void createCollisionArea() {
+        area.width = (int) (getSpriteWidth() /3);
+        area.height = (int) (getSpriteHeight() /3);
+        area.x =  (int) ((getxLocation()+getSpriteWidth()/2) - (area.width/2));
+        area.y = (int) ((getyLocation()+getSpriteHeight()/2) - (area.height/2));
+        setCollisionArea(area);
     }
 
     @Override
     public void draw(Graphics2D g2) {
-        super.draw(g2);
+        if(!isDead){
+            super.draw(g2);
+        }
     }
     
 }

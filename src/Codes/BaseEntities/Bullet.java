@@ -1,13 +1,16 @@
 package Codes.BaseEntities;
 
+import Codes.Screens.GameScreen;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
-public abstract class Bullet extends BaseObject {
-    //GameScreen gs;
-    public Bullet(int x,int y) {
-        //this.gs = gs;
+public class Bullet extends BaseObject {
+    GameScreen gs;
+    Rectangle area = new Rectangle();
+    public Bullet(GameScreen gs,int x,int y) {
+        this.gs = gs;
         setxLocation(x);
         setyLocation(y);
         setDefaultValues();
@@ -17,9 +20,10 @@ public abstract class Bullet extends BaseObject {
 
     @Override
     public void setDefaultValues() {
-        setSpeed(1);
+        setSpeed(5);
         setSpriteHeight(16);
         setSpriteWidth(16);
+        createCollisionArea();
     }
 
     @Override
@@ -33,23 +37,31 @@ public abstract class Bullet extends BaseObject {
     }
 
     @Override
-    public void update() {
+    public void update(){
         double x = getxLocation();
         double y = getyLocation();
-        double speed = getSpeed();
         int centerxImage = (int) (x +(getSpriteWidth()/2));
-
         int centeryImage = (int) (y +(getSpriteHeight()/2));
+        double speed = getSpeed();
         setxLocation(x+speed);
-        if(centerxImage>768 || centeryImage>576 || centerxImage<0 || centeryImage<0){
-            setIsDead(true);
+        if(centerxImage>getWindowWidth() || centeryImage>getWindowHeight() || centerxImage<0 || centeryImage<0){
+            this.isDead=true;
         }
+        createCollisionArea();
     }
 
     @Override
     public void draw(Graphics2D g2) {
-        if(!getIsDead()){
+        if(!isDead){
             super.draw(g2);
         }
+    }
+    @Override
+    public void createCollisionArea() {
+        area.width = (int) (getSpriteWidth() /3);
+        area.height = (int) (getSpriteHeight() /3);
+        area.x =  (int) ((getxLocation()+getSpriteWidth()/2) - (area.width/2));
+        area.y = (int) ((getyLocation()+getSpriteHeight()/2) - (area.height/2));
+        setCollisionArea(area);
     }
 }

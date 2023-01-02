@@ -4,6 +4,7 @@
  */
 package Codes.Handlers;
 
+import Codes.BaseEntities.BaseObject;
 import Codes.BaseEntities.Enemy;
 import java.awt.Graphics2D;
 
@@ -22,5 +23,6 @@ public class EnemyHandler extends OtherObjectHandler{
     @Override
     public void draw(Graphics2D g2d) {
     }
+
     
 }

@@ -4,7 +4,9 @@
  */
 package Codes.Handlers;
 
+import Codes.BaseEntities.BaseObject;
 import Codes.BaseEntities.Bullet;
+import Codes.Screens.GameScreen;
 import java.awt.Graphics2D;
 
 /**
@@ -13,14 +15,37 @@ import java.awt.Graphics2D;
  */
 public class BulletHandler extends OtherObjectHandler{
 
-    private Bullet bullet;
+    public Bullet bullet;
+
+    public BulletHandler(GameScreen gs) {
+        setGs(gs);
+    }
     
     @Override
     public void update() {
+        for(int i=0;i<getPack().size();i++){
+            bullet = (Bullet) getPack().get(i);
+            bullet.update();
+        }
     }
 
     @Override
     public void draw(Graphics2D g2d) {
+        for(int i=0;i<getPack().size();i++){
+            bullet = (Bullet) getPack().get(i);
+            bullet.draw(g2d);
+        }
     }
+
+    public void addObj(Bullet bullet) {
+        getPack().add(bullet);
+    }
+
+    public void removeObj(Bullet bullet) {
+        getPack().remove(bullet);
+    }
+
+    
+    
     
 }

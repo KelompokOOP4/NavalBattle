@@ -120,7 +120,7 @@ public class Screen3Frame implements ActionListener {
             frame.dispose();
         }
         if(obj==start){
-            new GameFrame(multiplayer[1].isSelected());
+            new GameFrame(!multiplayer[1].isEnabled());
             frame.setVisible(false);
             frame.dispose();
         }
